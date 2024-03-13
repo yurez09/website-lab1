@@ -1,0 +1,60 @@
+$color: rgb(215, 215, 223);
+$font-family: Times;
+
+/* Селектор по класу */
+.site-header {
+    background-color: rgb(0, 0, 0); 
+    padding: 10px; 
+    font-size: 20px;
+    font-family: $font-family, sans-serif;
+    text-align: center;
+    color: $color;
+}
+
+/* Селектор по id */
+#block-2 {
+    border: 10px solid rgb(97, 105, 107);
+}
+
+/* Груповий селектор */
+.links-block a,
+.image-block img {
+    margin-left: 100px;
+}
+
+/* Псевдокласи */
+.styled-text-block p:last-child {
+    color: $color;
+}
+
+/* Псевдоелементи */
+.special-characters-block::before {
+    content: "Спеціальні символи: ";
+    font-size: 20px;
+}
+
+/* Вкладений селектор */
+.form-block form input[type="text"] {
+    width: 500px;
+}
+
+/* Збірний селектор */
+.list-block ol li,
+.list-block ul li {
+    font-style: italic;
+}
+
+/* Анімація для появи блоків */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Початкова прозорість: невидимий */
+    }
+    to {
+        opacity: 1; /* Кінцева прозорість: повністю видимий */
+    }
+}
+
+/* Стилі для блоків, які мають анімацію появи */
+.block {
+    animation: fadeIn 3s ease; /* Використання анімації fadeIn з тривалістю 1 секунда та типом ease */
+}
